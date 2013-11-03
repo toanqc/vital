@@ -1,4 +1,4 @@
-INSERT INTO `vital`.`topic_type` (  
+INSERT INTO `topic_type` (  
   `TOPIC_TYPE_NAME`,
   `TOPIC_TYPE_DESC`,
   `TOPIC_DISPLAY_NAME`
@@ -24,7 +24,7 @@ VALUES
 	
 	
 	
-INSERT INTO `vital`.`content_topic` (
+INSERT INTO `content_topic` (
   `TITLE`,
   `SHORT_DESC`,
   `LONG_DESC`,
@@ -34,19 +34,19 @@ VALUES
   (
     'BRANDING',
     'We believe that a logo...',
-    'We believe that a logo is the heart and soul of any company’s corporate identity so we are dedicated to make sure that you will have a unique and creative logo that will standout from the rest.',
+    'We believe that a logo is the heart and soul of any company''s corporate identity so we are dedicated to make sure that you will have a unique and creative logo that will standout from the rest.',
     (SELECT topic_type.`TOPIC_TYPE_ID` FROM topic_type WHERE topic_type_name = 'OUR_SERVICES')
   ),
  (
     'GRAPHIC DESIGN',
     'Your marketing collaterals represents...',
-    'Your marketing collaterals represents your company and speaks for you when you are not around. Hence, we’re always ready to pool our creative juices together to ensure that your professionalism and products quality are well represented in you marketing collaterals. From brochures to catalogues, banners to billboards, we do it all.',
+    'Your marketing collaterals represents your company and speaks for you when you are not around. Hence, we''re always ready to pool our creative juices together to ensure that your professionalism and products quality are well represented in you marketing collaterals. From brochures to catalogues, banners to billboards, we do it all.',
     (SELECT topic_type.`TOPIC_TYPE_ID` FROM topic_type WHERE topic_type_name = 'OUR_SERVICES')
   ),  
  (
     'WEBSITE DESIGN',
     'Web exposure has become a...',
-    'Web exposure has become a major sales and marketing strategy for all companies, big and small. Let our team work with you to design a creative website that would bring forth your intended message but yet remain user-friendly and easy to navigate. We will also create a built-in management system that would allow you to analyse the site’s viewership and to be able to update information with ease. Our IT consultants will also assist in search engine optimisation (SEO) for your website.',
+    'Web exposure has become a major sales and marketing strategy for all companies, big and small. Let our team work with you to design a creative website that would bring forth your intended message but yet remain user-friendly and easy to navigate. We will also create a built-in management system that would allow you to analyse the site''s viewership and to be able to update information with ease. Our IT consultants will also assist in search engine optimisation (SEO) for your website.',
     (SELECT topic_type.`TOPIC_TYPE_ID` FROM topic_type WHERE topic_type_name = 'OUR_SERVICES')
   ),
  (
@@ -99,3 +99,23 @@ VALUES
 		'service-content gray-color border-public-relations-color'
 	);
 
+INSERT INTO `topic_style_link` (`CONTENT_TOPIC_ID`, `STYLE_ID`) 
+VALUES 
+	(
+		'1', '1'
+	),
+	(
+		'2', '2'
+	),
+	(
+		'3', '3'
+	),
+	(
+		'4', '4'
+	),
+	(
+		'5', '5'
+	),
+	(
+		'6', '6'
+	);
