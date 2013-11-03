@@ -4,6 +4,13 @@
 
 /*!40101 SET NAMES utf8 */;
 
+/* create database vital */
+CREATE DATABASE `vital` /*!40100 DEFAULT CHARACTER SET utf8 COLLATE utf8_unicode_ci */;
+
+/* use vital */
+USE `vital`;
+
+
 #
 # Structure for table "login_attempts"
 #
