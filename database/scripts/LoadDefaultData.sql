@@ -42,13 +42,7 @@ VALUES
     'Your marketing collaterals represents...',
     'Your marketing collaterals represents your company and speaks for you when you are not around. Hence, we’re always ready to pool our creative juices together to ensure that your professionalism and products quality are well represented in you marketing collaterals. From brochures to catalogues, banners to billboards, we do it all.',
     (SELECT topic_type.`TOPIC_TYPE_ID` FROM topic_type WHERE topic_type_name = 'OUR_SERVICES')
-  ),
-  (
-    'EVENTS MANAGEMENT',
-    'Organising a corporate event ...',
-    'Organising a corporate event can be a daunting task so let our dedicated team work together with you from conceptualisation to completion. We will work together to organise a successful and memorable event that you and your participants will talk about for a long time afterwards.',
-    (SELECT topic_type.`TOPIC_TYPE_ID` FROM topic_type WHERE topic_type_name = 'OUR_SERVICES')
-  ),
+  ),  
  (
     'WEBSITE DESIGN',
     'Web exposure has become a...',
@@ -61,9 +55,47 @@ VALUES
     'Allow us the opportunity to lighten you load, Let our experienced professionals manage your print jobs since poorly produced collaterals would do injustice to the design and as a result, negatively affect your corporate image. Our team will take care of your job from final artwork to print check, quality control and finally to the delivery of the finished products. We will ensure your expectations on quality and deadlines will be fully met. We will even assist you with minor corrects or touchups on the artwork before print, unless we are already designing your collaterals.',
     (SELECT topic_type.`TOPIC_TYPE_ID` FROM topic_type WHERE topic_type_name = 'OUR_SERVICES')
   ),
+  (
+    'EVENTS MANAGEMENT',
+    'Organising a corporate event ...',
+    'Organising a corporate event can be a daunting task so let our dedicated team work together with you from conceptualisation to completion. We will work together to organise a successful and memorable event that you and your participants will talk about for a long time afterwards.',
+    (SELECT topic_type.`TOPIC_TYPE_ID` FROM topic_type WHERE topic_type_name = 'OUR_SERVICES')
+  ),
  (
     'PUBLIC RELATIONS',
     'In order to provide...',
     'In order to provide a more comprehensive and complete service, we have teamed up with a group of public relations professionals with both international and local experience so that we can work with you to meet your communications objectives. Contact and connect with us so that we can work together to connect with your partners and customers.',
     (SELECT topic_type.`TOPIC_TYPE_ID` FROM topic_type WHERE topic_type_name = 'OUR_SERVICES')
   );
+  
+  
+INSERT INTO `topic_style` (  
+  `HEADER_CSS_CLASS`,
+  `BODY_CSS_CLASS`
+) 
+VALUES
+	(    
+		'service branding',
+		'service-content gray-color border-branding-color'
+	),
+	(
+		'service graphic-design',
+		'service-content gray-color border-graphic-design-color'
+	),
+	(
+		'service website-design',
+		'service-content gray-color border-website-design-color'
+	),
+	(
+		'service print-management',
+		'service-content gray-color border-print-management-color'
+	),
+	(
+		'service event-management',
+		'service-content gray-color border-event-management-color'
+	),
+	(
+		'service public-relations',
+		'service-content gray-color border-public-relations-color'
+	);
+
