@@ -14,19 +14,21 @@ function sec_session_start() {
 }
 
 //Login 
-function login($email, $password, $mysqli) {
+function login($username, $password, $db_con) {
    // Using prepared Statements means that SQL injection is not possible. 
-   if ($stmt = $mysqli->prepare("SELECT id, username, password, salt FROM members WHERE email = ? LIMIT 1")) { 
-      $stmt->bind_param('s', $email); // Bind "$email" to parameter.
+   echo '<script type="text/javascript">console.log("'. $username.$password.'");</script>';
+   if ($stmt = $db_con->prepare("SELECT USER_ID, USER_NAME, PASSWORD, SALT FROM members WHERE USER_NAME = ? LIMIT 1")) { 
+      $stmt->bind_param('s', $username); // Bind "$username" to parameter.
       $stmt->execute(); // Execute the prepared query.
       $stmt->store_result();
       $stmt->bind_result($user_id, $username, $db_password, $salt); // get variables from result.
       $stmt->fetch();
-      $password = hash('sha512', $password.$salt); // hash the password with the unique salt.
- 
+	  echo '<script type="text/javascript">console.log("'. $username.$password.'");</script>';
+      $password = hash('sha512', $password.$salt); // hash the password with the unique salt.	  
+		echo '<script type="text/javascript">console.log("'. $stmt->num_rows .'");</script>';
       if($stmt->num_rows == 1) { // If the user exists
          // We check if the account is locked from too many login attempts
-         if(checkbrute($user_id, $mysqli) == true) { 
+         if(checkbrute($user_id, $db_con) == true) { 
             // Account is locked
             // Send an email to user saying their account is locked
             return false;
@@ -48,7 +50,7 @@ function login($email, $password, $mysqli) {
             // Password is not correct
             // We record this attempt in the database
             $now = time();
-            $mysqli->query("INSERT INTO login_attempts (user_id, time) VALUES ('$user_id', '$now')");
+            $db_con->query("INSERT INTO login_attempts (user_id, time) VALUES ('$user_id', '$now')");
             return false;
          }
       }
@@ -59,13 +61,13 @@ function login($email, $password, $mysqli) {
    }
 }
 
-function checkBrute($user_id, $mysqli) {
+function checkBrute($user_id, $db_con) {
    // Get timestamp of current time
    $now = time();
    // All login attempts are counted from the past 2 hours. 
    $valid_attempts = $now - (2 * 60 * 60); 
  
-   if ($stmt = $mysqli->prepare("SELECT time FROM login_attempts WHERE user_id = ? AND time > '$valid_attempts'")) { 
+   if ($stmt = $db_con->prepare("SELECT time FROM login_attempts WHERE user_id = ? AND time > '$valid_attempts'")) { 
       $stmt->bind_param('i', $user_id); 
       // Execute the prepared query.
       $stmt->execute();
@@ -81,7 +83,7 @@ function checkBrute($user_id, $mysqli) {
 
 
 
-function login_check($mysqli) {
+function login_check($db_con) {
    // Check if all session variables are set
    if(isset($_SESSION['user_id'], $_SESSION['username'], $_SESSION['login_string'])) {
      $user_id = $_SESSION['user_id'];
@@ -90,7 +92,7 @@ function login_check($mysqli) {
  
      $user_browser = $_SERVER['HTTP_USER_AGENT']; // Get the user-agent string of the user.
  
-     if ($stmt = $mysqli->prepare("SELECT password FROM members WHERE id = ? LIMIT 1")) { 
+     if ($stmt = $db_con->prepare("SELECT password FROM members WHERE id = ? LIMIT 1")) { 
         $stmt->bind_param('i', $user_id); // Bind "$user_id" to parameter.
         $stmt->execute(); // Execute the prepared query.
         $stmt->store_result();
@@ -130,13 +132,21 @@ function create_hash(){
 	 
 	// Add your insert to database script here. 
 	// Make sure you use prepared statements!
-	if ($insert_stmt = $mysqli->prepare("INSERT INTO members (USER_NAME, PASSWORD, DATE_CREATED, STATUS, DELETE_FLAG, SALT) VALUES (?, ?, ?, ?, ?, ?)")) {    
-	   $insert_stmt->bind_param('ssss', $username, $email, $password, $random_salt); 
+	if ($insert_stmt = $db_con->prepare("INSERT INTO members (USER_NAME, PASSWORD, DATE_CREATED, STATUS, DELETE_FLAG, SALT) VALUES (?, ?, ?, ?, ?, ?)")) {    
+	   $insert_stmt->bind_param('ssss', $username, $username, $password, $random_salt); 
 	   // Execute the prepared query.
 	   $insert_stmt->execute();
+	}
 }
 
+function checkPasswordsMatched($pass, $passConf){
+  if ($pass == $passConf){
+		echo 'passwords matched';
+		return true;
+  } else {
+		echo 'Passwords do not match';
+		return false;
+  }
 }
-
 ?>
 

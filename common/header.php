@@ -1,4 +1,3 @@
-<head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -10,4 +9,3 @@
 	<script src="../lib/bootstrap-3.0.0/js/bootstrap.min.js"></script>
 
 	<title>Vital Connections</title>
-</head>

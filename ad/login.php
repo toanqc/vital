@@ -18,7 +18,7 @@ if(isset($_GET['error'])) {
 				User name:
 			</div>
 			<div class="col-md-1">
-				<input type="text" name="email" />
+				<input type="text" name="username" />
 			</div>
 		</div>
 		<div class="row" style="padding:7px">
