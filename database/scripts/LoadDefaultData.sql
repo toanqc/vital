@@ -1,19 +1,24 @@
 INSERT INTO `vital`.`topic_type` (  
   `TOPIC_TYPE_NAME`,
-  `TOPIC_TYPE_DESC`
+  `TOPIC_TYPE_DESC`,
+  `TOPIC_DISPLAY_NAME`
 ) 
 VALUES
   (    
     'OUR_SERVICES',
-    'All entries about our services'
+    'All entries about our services topics',
+	'Our services'
 	),
   ( 'ABOUT_US',
-    'About ourselve'
+    'About ourselve',
+	'About us'
 	),
   ('OUR_PARTNERS',
-	'Our partners'
+	'About our partners topics',
+	'Our partners',
 	),
   ('CONTACT_US',
+	'Contact us topics',
 	'Contact us'
 	);
 	
