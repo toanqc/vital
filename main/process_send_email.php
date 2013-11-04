@@ -72,47 +72,50 @@
 						<div class="information-content">Tel: 5310 0803 - Fax: 5410 2125</div>
 					</div>
 				</div>
+
+				<?php 
+					/**
+					// TODO: handle fields' validation
+					if (isset($_POST['email']) && !empty($_POST['customerEmail'])){
+						
+					} else {
+						header('Location: ./contact.php?invalid_email=1');
+					}	**/				
+					include_once('../common/email_functions.php');
+				?>			
 				
-				<form action="process_send_email.php" method="post">
-					<div class="contact-form">
-						<div class="contact-line">
-							<div class="col-md-2 ">Name*</div>
-							<div class="col-md-10">
-								<input type="text" name="customerName" size="80" />
-							</div>
-						</div>
-						<div class="contact-line">
-							<div class="col-md-2 ">Company*</div>
-							<div class="col-md-10 ">
-								<input type="text" name="customerCompany" size="80" />
-							</div>
-						</div>
-						<div class="contact-line">
-							<div class="col-md-2 ">Email*</div>
-							<div class="col-md-10 ">
-								<input type="text" name="customerEmail" size="80" /><?php if(isset($_GET['invalid_email'])) { echo ' Invalid email!';} ?>
-							</div>
-						</div>
-						<div class="contact-line">
-							<div class="col-md-2 ">Tel*</div>
-							<div class="col-md-10 ">
-								<input type="text" name="customerPhoneNo" size="80" />
-							</div>
-						</div>
-						<div class="contact-line">
-							<div class="col-md-2 ">Text*</div>
-							<div class="col-md-10 ">
-								<textarea name="customerQuestions" rows="7" cols="82"></textarea>
-							</div>
-						</div>
-						<div class="contact-line">
-							<div class="col-md-2 "></div>
-							<div class="col-md-9 text-right button-send">
-								<button class="btn btn-xs">Send</button>
-							</div>
+				<div class="row">
+					<div class="vital-connections-information">						
+						<div class="information-content">
+							<?php 
+								//echo $_POST['customerName']." ".$_POST['customerCompany']." ".$_POST['customerEmail']." ".$_POST['customerPhoneNo']." ".$_POST['customerQuestions'];
+								$to = 'luan.1020902@gmail.com';
+								$from = $_POST['customerEmail'];
+								$message = $_POST['customerQuestions'];
+								$subject = "This is a subject";
+								if (isset($from))
+								{
+									// if "email" is filled out, proceed
+									// check if the email address is invalid
+									$mailcheck = spamcheck($from);
+									if ($mailcheck==FALSE)
+									{
+										header('Location: ./contact.php?invalid_email=1');
+									}
+									else
+									{// send email
+										sendEmail($from,$to,$subject,$message);
+									}
+								}
+								else
+								{
+									// if "email" is not filled out, display the form
+									header('Location: ./contact.php?invalid_email=1');
+								}								
+							?>
 						</div>
 					</div>
-				</form>
+				</div>
 			</div>
 			<div class="col-md-2"></div>
 		</div>

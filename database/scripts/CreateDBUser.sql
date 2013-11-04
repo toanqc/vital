@@ -4,7 +4,7 @@ CREATE DATABASE `vital` CHARACTER SET utf8 COLLATE utf8_unicode_ci;
 USE 'vital';
 
 /*CREATE DB USER*/
-CREATE USER vitalconn IDENTIFIED BY 'P@ssword123'; 
+CREATE USER 'vitalconn'@'localhost' IDENTIFIED BY 'P@ssword123'; 
 GRANT ALL PRIVILEGES ON *.* TO 'vitalconn'@'%' IDENTIFIED BY 'P@ssword123' WITH GRANT OPTION; 
 GRANT ALL PRIVILEGES ON *.* TO 'vitalconn'@'localhost' IDENTIFIED BY 'P@ssword123' WITH GRANT OPTION;
 
