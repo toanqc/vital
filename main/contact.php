@@ -4,6 +4,8 @@
 
 <?php include_once('../common/header.php') ?>
 
+<script src="../js/validation.js"></script>
+
 <title>Vital Connections</title>
 </head>
 
@@ -72,8 +74,9 @@
 						<div class="information-content">Tel: 5310 0803 - Fax: 5410 2125</div>
 					</div>
 				</div>
+			
+				<form action="process_send_email.php" method="post" onsubmit="return validation(this);">
 				
-				<form action="process_send_email.php" method="post">
 					<div class="contact-form">
 						<div class="contact-line">
 							<div class="col-md-2 ">Name*</div>
