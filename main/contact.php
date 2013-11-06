@@ -4,6 +4,8 @@
 
 <?php include_once('../common/header.php') ?>
 
+<script src="../js/validation.js"></script>
+
 <title>Vital Connections</title>
 </head>
 
@@ -73,7 +75,7 @@
 					</div>
 				</div>
 
-				<form action="">
+				<form action="" onsubmit="return validation(this);">
 					<div class="contact-form">
 						<div class="contact-line">
 							<div class="col-md-2 ">Name*</div>
