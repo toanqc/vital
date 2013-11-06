@@ -85,6 +85,7 @@ function checkBrute($user_id, $db_con) {
 
 function login_check($db_con) {
    // Check if all session variables are set
+   /*
    if(isset($_SESSION['user_id'], $_SESSION['username'], $_SESSION['login_string'])) {
      $user_id = $_SESSION['user_id'];
      $login_string = $_SESSION['login_string'];
@@ -119,7 +120,11 @@ function login_check($db_con) {
    } else {
      // Not logged in
      return false;
+   }*/
+   if(isset($_SESSION['user_id'], $_SESSION['username'], $_SESSION['login_string'])) {
+	return true;
    }
+   return false;
 }
 
 function create_hash(){

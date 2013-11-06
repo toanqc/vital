@@ -11,9 +11,10 @@ if(isset($_POST['username'], $_POST['p'])) {
    if(login($username, $password, $db_con) == true) {
       // Login success
 		echo 'Success: You have been logged in!';
+		header('Location: ./add-topic.php');
    } else {
       // Login failed
-		header('Location: ./login.php?error=1');	 
+		header('Location: ./login.php?error=1');
    }
 } else { 
    // The correct POST variables were not sent to this page.
