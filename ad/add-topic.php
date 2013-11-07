@@ -13,17 +13,26 @@ sec_session_start();
 if(login_check($db_con) == true) {
 ?> 
 <form action="insert-topic.php" method="POST">
-	<div>
+	<div class="container">
+	
+		<div class="row">
+			<div class="header-logo">
+				<img alt="" src="../images/vital_connections.png" />
+			</div>
+		</div>
+
+		<div style="margin:30px">
+
 		<?php include_once('../common/config.php') ?>
 		<div class="row" style="padding:7">
 		<!-- Title -->
-			<div class="col-md-1 col-md-offset-1">Topic title:</div>
+			<div class="col-md-2 col-md-offset-1">Topic title:</div>
 			<div class="col-md-1"><input type="text" name="itopicTitle"></div>
 		</div>
 		
 		<div class="row" style="padding:7">
 			<!-- Topic type -->
-			<div class="col-md-1 col-md-offset-1">Topic type:</div>
+			<div class="col-md-2 col-md-offset-1">Topic type:</div>
 			<div class="col-md-1">
 				<select name="iTopicType">
 					<?php 
@@ -37,13 +46,13 @@ if(login_check($db_con) == true) {
 			</div>
 		</div>
 		<div class="row" style="padding:7">
-			<div class="col-md-1 col-md-offset-1">Short description:</div>
+			<div class="col-md-2 col-md-offset-1">Short description:</div>
 			<div class="col-md-1"><input type="text" name="iSortDesc"></div>
 		</div>
 		
 		<div class="row" style="padding:7">
 			<!-- Description -->
-			<div class="col-md-1 col-md-offset-1">Description:</div>
+			<div class="col-md-2 col-md-offset-1">Description:</div>
 			<div class="col-md-1"><textarea name="iDescription" rows="5" cols="43"></textarea></div>
 		</div>	
 		<div class="row" style="padding:7">
