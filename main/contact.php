@@ -76,7 +76,6 @@
 				</div>
 			
 				<form action="process_send_email.php" method="post" onsubmit="return validation(this);">
-				
 					<div class="contact-form">
 						<div class="contact-line">
 							<div class="col-md-2 ">Name*</div>

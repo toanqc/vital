@@ -5,10 +5,13 @@
 /*!40101 SET NAMES utf8 */;
 
 /* create database vital */
-CREATE DATABASE `vital` /*!40100 DEFAULT CHARACTER SET utf8 COLLATE utf8_unicode_ci */;
+
+DROP DATABASE `vitalcon_vital`
+
+CREATE DATABASE `vitalcon_vital` /*!40100 DEFAULT CHARACTER SET utf8 COLLATE utf8_unicode_ci */;
 
 /* use vital */
-USE `vital`;
+USE `vitalcon_vital`;
 
 
 #

@@ -89,10 +89,10 @@
 						<div class="information-content">
 							<?php 
 								//echo $_POST['customerName']." ".$_POST['customerCompany']." ".$_POST['customerEmail']." ".$_POST['customerPhoneNo']." ".$_POST['customerQuestions'];
-								$to = 'luan.1020902@gmail.com';
+								$to = 'uy@vitalconnections.com.vn';
 								$from = $_POST['customerEmail'];
 								$message = $_POST['customerQuestions'];
-								$subject = "This is a subject";
+								$subject = "Customer Feedback";
 								if (isset($from))
 								{
 									// if "email" is filled out, proceed
