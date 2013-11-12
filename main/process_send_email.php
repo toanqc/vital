@@ -22,10 +22,10 @@
     $mail->Host = "mail.vitalconnections.com.vn";
     $mail->Port = 25;
     $mail->SMTPAuth = true; // turn on SMTP authentication
-    $mail->Username = "uy@vitalconnections.com.vn"; // SMTP username
-    $mail->Password = ""; // SMTP password
+    $mail->Username = "contact@vitalconnections.com.vn"; // SMTP username
+    $mail->Password = "vital"; // SMTP password
     $mail->From     = $email;
-    /*$mail->AddAddress("sales@gmail.com");*/   
+    $mail->AddAddress("uy@vitalconnections.com.vn");   
     $mail->Subject  = "Customer contact from website. Name: " . $name;
     $mail->Body     = $message;
     $mail->WordWrap = 50;

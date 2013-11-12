@@ -71,7 +71,7 @@
 						<div class="information-header">CTY TNHH Kết Nối V.I.T.A.L</div>
 						<div class="information-content">Vital Connections Co., LTD.</div>
 						<div class="information-content">AA2-3 Mỹ Khang, Phú Mỹ Hưng, Quận 7, TP. HCM</div>
-						<div class="information-content">Tel: 5310 0803 - Fax: 5410 2125</div>
+						<div class="information-content">Tel: +84 8 5410 0803 - Fax: +84 8 5410 2124</div>
 					</div>
 				</div>
 			
@@ -146,7 +146,7 @@
 					<div class="text-center">Contact</div>
 				</div>
 				<div class="row hotline-bottom">
-					<div class="text-center blue-color">Hotline: 0908 283 918 - 0903 199 200</div>
+					<div class="text-center blue-color">Hotline: +84 908 283 918 - +84 903 199 200</div>
 				</div>
 				<div class="row copyright">
 					<div class="text-center">Copyright 2013</div>

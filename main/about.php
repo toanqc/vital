@@ -112,7 +112,7 @@
 					<div class="text-center">Contact</div>
 				</div>
 				<div class="row hotline-bottom">
-					<div class="text-center blue-color">Hotline: 0908 283 918 - 0903 199 200</div>
+					<div class="text-center blue-color">Hotline: +84 908 283 918 - +84 903 199 200</div>
 				</div>
 				<div class="row copyright">
 					<div class="text-center">Copyright 2013</div>
