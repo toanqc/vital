@@ -59,40 +59,40 @@
 			<div class="col-md-6">
 				<div class="row margin-20"></div>
 				<div class="row text-center content-picture">
-					<div id="carousel-example-generic" class="carousel slide" data-ride="carousel" data-interval="1500" data-pause="hover">
+					<div id="carousel-example-generic" class="carousel carousel-fade slide" data-ride="carousel" data-interval="2500" data-pause="false">
 						<div class="carousel-inner">
 							<div class="item active">
-								<img alt="" src="../images/picture_1.png" width="100%">
+								<img alt="" src="../images/picture_1.jpg" width="100%">
 							</div>
 							<div class="item">
-								<img alt="" src="../images/picture_2.png" width="100%">
+								<img alt="" src="../images/picture_2.jpg" width="100%">
 							</div>
 							<div class="item">
-								<img alt="" src="../images/picture_3.png" width="100%">
+								<img alt="" src="../images/picture_3.jpg" width="100%">
 							</div>
 							<div class="item">
-								<img alt="" src="../images/picture_4.png" width="100%">
+								<img alt="" src="../images/picture_4.jpg" width="100%">
 							</div>
 							<div class="item">
-								<img alt="" src="../images/picture_6.png" width="100%">
+								<img alt="" src="../images/picture_6.jpg" width="100%">
 							</div>
 							<div class="item">
-								<img alt="" src="../images/picture_7.png" width="100%">
+								<img alt="" src="../images/picture_8.jpg" width="100%">
 							</div>
 							<div class="item">
-								<img alt="" src="../images/picture_8.png" width="100%">
+								<img alt="" src="../images/picture_9.jpg" width="100%">
 							</div>
 							<div class="item">
-								<img alt="" src="../images/picture_9.png" width="100%">
+								<img alt="" src="../images/picture_10.jpg" width="100%">
 							</div>
 							<div class="item">
-								<img alt="" src="../images/picture_10.png" width="100%">
+								<img alt="" src="../images/picture_11.jpg" width="100%">
 							</div>
 							<div class="item">
-								<img alt="" src="../images/picture_11.png" width="100%">
+								<img alt="" src="../images/picture_12.jpg" width="100%">
 							</div>
 							<div class="item">
-								<img alt="" src="../images/picture_12.png" width="100%">
+								<img alt="" src="../images/picture_13.jpg" width="100%">
 							</div>
 						</div>
 					</div>
