@@ -1,5 +1,6 @@
 <?php
-	include('class.phpmailer.php');
+	require("class.phpmailer.php");
+	require("class.smtp.php");
 
 	// Get data that send from contact page
 	$name = $_POST['customerName'];
@@ -8,25 +9,26 @@
 	$tel = $_POST['customerPhoneNo'];
 	$text = $_POST['customerQuestions'];
 
-	$message = "Customer Name: " . $name + "\n";
-	$message += "Customer Company: " . $company + "\n";
-	$message += "Customer Email: " . $email + "\n";
-	$message += "Customer Tel: " . $tel + "\n";
-	$message += "\n\n\n";
-	$message += $text; 
+	$message = "Customer Name: " . $name . "\n";
+	$message .= "Customer Company: " . $company . "\n";
+	$message .= "Customer Email: " . $email . "\n";
+	$message .= "Customer Tel: " . $tel . "\n";
+	$message .= "\n\n";
+	$message .= $text;
 
 	$mail = new PHPMailer();
 	$mail->IsSMTP();  // telling the class to use SMTP
-    $mail->IsSMTP();  // telling the class to use SMTP
     $mail->Mailer = "smtp";
-    $mail->Host = "mail.vitalconnections.com.vn";
+    $mail->Host = "vitalconnections.com.vn";
     $mail->Port = 25;
+    $mail->SMTPDebug = 1;
     $mail->SMTPAuth = true; // turn on SMTP authentication
     $mail->Username = "contact@vitalconnections.com.vn"; // SMTP username
     $mail->Password = "vital"; // SMTP password
     $mail->From     = $email;
-    $mail->AddAddress("uy@vitalconnections.com.vn");   
+    $mail->AddAddress("contact@vitalconnections.com.vn");   
     $mail->Subject  = "Customer contact from website. Name: " . $name;
+    $mail->IsHTML(false);
     $mail->Body     = $message;
     $mail->WordWrap = 50;
 
@@ -34,7 +36,6 @@
          echo 'Message was not sent.';
          echo 'Mailer error: ' . $mail->ErrorInfo;
     } else {
-         echo "<script language='javascript'>document.location.href='lib/alert.php?mess=Message has been sent...&gourl=/?module=home'</script>";
-         header('location: main/contact.php');
+         header('location: contact.php?success=true');
     }
 ?>

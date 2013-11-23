@@ -74,6 +74,17 @@
 						<div class="information-content">Tel: +84 8 5410 0803 - Fax: +84 8 5410 2124</div>
 					</div>
 				</div>
+
+				<div class="row">
+					<?php
+						if (isset($_GET['success']) && $_GET['success'] == true) {
+					?>
+							<div class="success">Message has been sent. Thank you for contact us!!!</div>
+					<?php
+							
+						}
+					?>
+				</div>
 			
 				<form action="process_send_email.php" method="post" onsubmit="return validation(this);">
 					<div class="contact-form">

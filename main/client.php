@@ -55,8 +55,8 @@
 
 	<div class="container background-grey">
 		<div class="row">
-			<div class="col-md-3"></div>
-			<div class="col-md-6">
+			<div class="col-md-1"></div>
+			<div class="col-md-10">
 				<div class="row margin-20"></div>
 				<div class="row text-center content-picture">
 					<div id="carousel-example-generic" class="carousel carousel-fade slide" data-ride="carousel" data-interval="2500" data-pause="false">
@@ -86,9 +86,6 @@
 								<img alt="" src="../images/picture_10.jpg" width="100%">
 							</div>
 							<div class="item">
-								<img alt="" src="../images/picture_11.jpg" width="100%">
-							</div>
-							<div class="item">
 								<img alt="" src="../images/picture_12.jpg" width="100%">
 							</div>
 							<div class="item">
@@ -108,47 +105,20 @@
 
 				<div class="row margin-20 break-line-title"></div>
 
-				<div class="row text-center gray-color">Some of our customers:</div>
+				<div class="row text-center">Some of our customers:</div>
 				<div class="row text-center">
-					<div class="customer-logo">
-						<img alt="" src="../images/client_logo_all_world.png" />
-					</div>
-					<div class="customer-logo">
-						<img alt="" src="../images/client_logo_bes.png" />
-					</div>
-					<div class="customer-logo">
-						<img alt="" src="../images/client_logo_ses.png" />
-					</div>
-					<div class="customer-logo">
-						<img alt="" src="../images/client_logo_hkes.png" />
+					<div class="our-customer">
+						<img alt="" src="../images/client_1.png" />
 					</div>
 				</div>
-				<div class="row">
-					<div class="customer-logo-padding">
-						<img alt="" src="../images/client_logo_propak.png" />
-					</div>
-					<div class="customer-logo-padding">
-						<img alt="" src="../images/client_logo_mta.png" />
-					</div>
-					<div class="customer-logo-padding">
-						<img alt="" src="../images/client_logo_food&hotel.png" />
-					</div>
-					<div class="customer-logo-padding">
-						<img alt="" src="../images/client_logo_elenex.png" />
+				<div class="row text-center">
+					<div class="our-customer">
+						<img alt="" src="../images/client_2.png" />
 					</div>
 				</div>
-				<div class="row">
-					<div class="customer-logo-padding">
-						<img alt="" src="../images/client_logo_mining.png" />
-					</div>
-					<div class="customer-logo-padding">
-						<img alt="" src="../images/client_logo_p&r.png" />
-					</div>
-					<div class="customer-logo-padding">
-						<img alt="" src="../images/client_logo_architecture.png" />
-					</div>
-					<div class="customer-logo-padding">
-						<img alt="" src="../images/client_logo_industrial_automation.png" />
+				<div class="row text-center">
+					<div class="our-customer">
+						<img alt="" src="../images/client_3.png" />
 					</div>
 				</div>
 
@@ -158,31 +128,13 @@
 
 		<div class="row">
 			<div class="our-customer row text-center">
-				<div class="customer-logo">
-					<img alt="" src="../images/client_logo_guocoland.png" />
-				</div>
-				<div class="customer-logo">
-					<img alt="" src="../images/client_logo_keppel.png" />
-				</div>
-				<div class="customer-logo">
-					<img alt="" src="../images/client_logo_truongthanh.png" />
-				</div>
-				<div class="customer-logo">
-					<img alt="" src="../images/client_logo_sphere.png" />
-				</div>
-				<div class="customer-logo">
-					<img alt="" src="../images/client_logo_maple_tree.png" />
-				</div>
-				<div class="customer-logo">
-					<img alt="" src="../images/client_logo_poultry_egg_export.png" />
-				</div>
-				<div class="customer-logo">
-					<img alt="" src="../images/client_logo_kotra.png" />
+				<div>
+					<img alt="" src="../images/client_4.png" />
 				</div>
 			</div>
 		</div>
 
-		<div class="row margin-20"></div>
+		<div class="row margin-5-5"></div>
 
 		<!-- FOOTER -->
 		<div class="row">
