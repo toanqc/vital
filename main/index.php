@@ -2,6 +2,8 @@
 <html lang="en">
 <head>
 
+<script language="javascript" src="../js/flashdetection.js"></script>
+
 <?php include_once('../common/header.php') ?>
 
 <style type="text/css" media="screen">
